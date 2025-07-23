@@ -1,5 +1,4 @@
 # main.py
-
 def print_board(board):
     print("\n")
     for row in board:
@@ -8,7 +7,7 @@ def print_board(board):
     print("\n")
 
 def check_winner(board, player):
-    # Check rows, columns, diagonals
+    #checking rows, columns, diagonals
     for i in range(3):
         if all(cell == player for cell in board[i]):  # row
             return True
