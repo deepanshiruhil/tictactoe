@@ -1,4 +1,5 @@
 # main.py
+
 def print_board(board):
     print("\n")
     for row in board:
@@ -11,11 +12,11 @@ def check_winner(board, player):
     for i in range(3):
         if all(cell == player for cell in board[i]):  # row
             return True
-        if all(board[j][i] == player for j in range(3)):  # column
+        if all(board[j][i] == player for j in range(3)):  #for column
             return True
-    if all(board[i][i] == player for i in range(3)):  # main diagonal
+    if all(board[i][i] == player for i in range(3)):  #for main diagonal
         return True
-    if all(board[i][2 - i] == player for i in range(3)):  # anti diagonal
+    if all(board[i][2 - i] == player for i in range(3)):  #for anti diagonal
         return True
     return False
 
